@@ -1,5 +1,5 @@
 $(document).ready(onReady);
-
+let clickCount = 0;
 
 function onReady(){
     $('#generateButton').on('click', clickHandler)
@@ -7,8 +7,9 @@ function onReady(){
 
 
 function clickHandler() {
+    clickCount++;
     $('#divItem').append(
-        '<div>' + 'Look, I am appended!' + '</div>'
+        '<div>' + '<p>' + clickCount + '</p>' + '</div>'
     );
     
 }//end clickHandler
