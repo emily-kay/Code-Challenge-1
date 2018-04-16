@@ -1,5 +1,6 @@
 $(document).ready(onReady);
 let clickCount = 0;
+let backgroundRed = true;
 
 function onReady(){
     $('#generateButton').on('click', clickHandler)
@@ -19,8 +20,14 @@ function clickHandler() {
 }//end clickHandler
 
 function swapColors() {
-    $('#divItem').on('click', '#swapButton', function(){
+    $('#divItem').on('click', '#swapButton',  function(){
+       if (backgroundRed === true){
         $(this).parent().addClass('swapped');
-        
+        backgroundRed = false;
+       }
+       else {
+        $(this).parent().addClass('swappedBack');
+        backgroundRed = true;
+       }
     });//end generateButton
 }//end swapButton
