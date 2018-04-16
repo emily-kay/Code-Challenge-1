@@ -1,7 +1,10 @@
+$(document).ready(onReady);
 console.log('It works!');
 
-$(document).ready(onReady);
-
 function onReady(){
-    console.log('JQ works too!');    
+   $('#generateButton').on('click', console.log('Button starts'));   
+}
+
+function clickHandler(){
+    console.log('Button Works');
 }
