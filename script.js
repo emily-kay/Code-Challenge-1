@@ -1,10 +1,14 @@
 $(document).ready(onReady);
-console.log('It works!');
+
 
 function onReady(){
-   $('#generateButton').on('click', console.log('Button starts'));   
-}
+    $('#generateButton').on('click', clickHandler)
+}//end onReady
 
-function clickHandler(){
-    console.log('Button Works');
-}
+
+function clickHandler() {
+    $('#divItem').append(
+        '<div>' + 'Look, I am appended!' + '</div>'
+    );
+    
+}//end clickHandler
